@@ -1,0 +1,720 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* :root{
+
+} */
+
+body {
+  background-color: black;
+  height: 100vh;
+  width: 100vw;
+}
+.main_container {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 70px 1fr 90px;
+  /* border: 1px solid whitesmoke; */
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+header {
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100vw;
+  box-sizing: border-box;
+}
+
+header .logo_home_search_bar {
+  height: 85px;
+  width: 68%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 20px;
+}
+
+.logo_home_search_bar img {
+  height: 35px;
+  width: auto;
+  /* padding-left: 15px; */
+}
+
+header .home_search_bar {
+  height: 100%;
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.home_search_bar input {
+  height: 50px;
+  width: 480px;
+  border: none;
+  background-color: rgb(19, 19, 19);
+  border-radius: 25px;
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+  padding-left: 25px;
+}
+
+.home_search_bar button {
+  height: 47px;
+  width: 47px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: none;
+  background-color: rgb(128, 128, 128);
+  transition: all 200ms linear;
+}
+.home_search_bar button:hover {
+  background-color: rgb(171, 171, 171);
+}
+.home_search_bar #home_btn_img {
+  height: 100%;
+  width: 100%;
+  opacity: 75%;
+  object-fit: contain;
+}
+/*---------------------------------------------header optios ------------- */
+.header_options {
+  height: 100%;
+  width: 32%;
+  display: flex;
+  align-items: center;
+  justify-content: right;
+  padding-right: 15px;
+  gap: 5%;
+  box-sizing: border-box;
+}
+
+.header_options button {
+  height: 45%;
+  border-radius: 25px;
+  overflow: hidden;
+  font-size: 0.9rem;
+  font-weight: bold;
+  transition: all 100ms linear;
+}
+.header_options button:first-child,
+button:nth-child(2) {
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+}
+.header_options button:nth-child(2) {
+  background-color: rgb(0, 0, 0);
+  border: none;
+  color: white;
+  transition: all 200ms linear;
+}
+.header_options button:nth-child(2):hover {
+  background-color: rgb(23, 23, 23);
+}
+
+.header_options button:first-child:hover {
+  background-color: rgb(133, 133, 133);
+}
+
+button:nth-child(3),
+button:nth-child(4) {
+  height: 28px;
+  width: 28px;
+  background: transparent;
+  border: none;
+  color: white;
+  object-fit: cover;
+  transition: all 200ms ease;
+}
+.header_options button:nth-child(3):hover,
+button:nth-child(4):hover {
+  transform: scale(1.2);
+}
+.header_options button img {
+  height: 100%;
+  height: 100%;
+}
+
+@media only screen and (max-width: 1110px) {
+  header {
+    justify-content: space-between;
+    gap: 2vw;
+  }
+  header .logo_home_search_bar {
+    justify-content: flex-start;
+    width: auto;
+    gap: 2%;
+  }
+
+  .header_options #explore_btn,
+  #intall_btn {
+    font-size: 0.65rem;
+  }
+}
+@media screen and (max-width: 970px) {
+  header .header_options button:first-child {
+    display: none;
+  }
+  header .header_options {
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .main_container {
+    grid-template-rows: 60px 1fr 90px;
+  }
+  header {
+    height: 100%;
+  }
+  header .logo_home_search_bar {
+    height: 55px;
+    width: auto;
+    padding-left: 0;
+  }
+  .logo_home_search_bar img {
+    height: 30px;
+    width: auto;
+  }
+
+  header .home_search_bar {
+    height: 80%;
+    width: auto;
+  }
+  .home_search_bar input {
+    height: 100%;
+    max-width: 480px;
+    width: 60vw;
+    font-size: 0.8rem;
+    padding-left: 5%;
+  }
+
+  .home_search_bar button {
+    height: 35px;
+    width: 35px;
+  }
+
+  .header_options {
+    height: 80%;
+    width: 32%;
+    gap: 2%;
+  }
+
+  .main_container .container {
+    grid-template-columns: 70px 2fr 1fr;
+  }
+  .container .your_library .your_library_header {
+    height: auto !important;
+  }
+
+  .container .your_library_header #library_icon {
+    height: auto;
+    width: 100%;
+  }
+  .your_library_content .library_card {
+    height: 65px;
+    padding: 5px;
+  }
+
+  .all_section .all_section_header {
+    height: 70px;
+    gap: 2%;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .logo_home_search_bar .home_search_bar button {
+    display: none;
+  }
+  .header_options button:nth-child(3),
+  #profile_btn {
+    display: none;
+  }
+  .header_options {
+    width: auto;
+    padding-right: 0;
+  }
+  header {
+    justify-content: center;
+  }
+  .header_options #install_btn {
+    font-size: 0.8rem;
+    height: 70%;
+  }
+}
+/*---------------------------------------------------------main----------------- */
+main {
+  width: 100vw;
+  height: 100%;
+  box-sizing: border-box;
+  min-height: 0;
+  overflow: hidden;
+}
+
+main .container {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  /* border:1px solid white; */
+  column-gap: 0.5%;
+  padding-left: 0.5%;
+  padding-right: 0.5%;
+  box-sizing: border-box;
+}
+
+main .your_library,
+.all_section,
+.song_info {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 13px;
+  background-color: rgb(19, 19, 19);
+  color: aliceblue;
+}
+
+@media screen and (max-width: 1080px) {
+  main .container {
+    grid-template-columns: 100px 2fr 1fr;
+  }
+}
+
+@media screen and (max-width: 464px) {
+  .main_container .container {
+    grid-template-columns: 70px 1fr;
+  }
+  .container .song_info {
+    display: none;
+  }
+}
+.play_bar {
+  /* height:12vh;
+  width: 100%; */
+  color: aliceblue;
+}
+
+/*------------------------------------------------------------------Your library------------- */
+
+.container .your_library {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  min-height: 0;
+}
+.container .your_library .your_library_header {
+  flex-shrink: 0;
+  height: 100px;
+  width: 100%;
+  min-height: 0;
+  /* border: 1px solid white; */
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+.container .your_library .your_library_content {
+  flex-grow: 1;
+  min-height: 0;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*------------------------------------------------------------------Your library row one ------------- */
+
+.your_library_header .row_one_header {
+  display: flex;
+  font-size: 0.6rem;
+  align-items: center;
+  height: 40%;
+  padding-top: 10px;
+  justify-content: space-around;
+  width: 100%;
+  position: relative;
+}
+.row_one_header .library_btns {
+  height: 100%;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 5%;
+}
+
+.row_one_header h1 {
+  transition: all 200ms ease;
+}
+
+.row_one_header #collapse_icon {
+  height: 100%;
+  width: auto;
+  filter: brightness(200%);
+  transition: all 200ms ease;
+  opacity: 0;
+  position: absolute;
+  left: 0px;
+}
+
+.your_library:hover #collapse_icon {
+  transform: translateX(10px);
+  opacity: 100%;
+}
+.your_library:hover .row_one_header h1 {
+  transform: translateX(35px);
+}
+
+.library_btns button {
+  height: 91%;
+  width: 46%;
+  font-size: 0.7rem;
+  font-weight: bold;
+  border-radius: 50%;
+  border: none;
+  color: white;
+  background-color: rgb(33, 33, 33);
+  transition: all 200ms linear;
+}
+
+.library_btns button:hover {
+  background-color: rgb(48, 48, 48);
+}
+
+/*------------------------------------------------------------------Your library row two ------------- */
+
+.row_two_btns {
+  padding-top: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+  width: 100%;
+  gap: 10%;
+}
+
+.your_library_header #library_icon {
+  display: none;
+}
+.row_two_btns button {
+  height: 80%;
+  width: 30%;
+  border: none;
+  border-radius: 25px;
+  color: white;
+  background-color: rgb(44, 44, 44);
+  font-size: 0.9rem;
+  transition: all 200ms linear;
+}
+.row_two_btns button:hover {
+  background-color: rgb(62, 62, 62);
+}
+
+@media only screen and (max-width: 1080px) {
+  .your_library_header .row_one_header,
+  .row_two_btns {
+    display: none;
+  }
+  .your_library_header .row_one_header {
+    /* font-size: 0.8rem; */
+    text-align: center;
+  }
+  .your_library_content .content_heading #Library_recent {
+    display: none;
+  }
+  .your_library_header #library_icon {
+    display: block;
+    height: 100%;
+    width: auto;
+    filter: brightness(300%);
+  }
+
+  .your_library_content .library_card {
+    justify-content: center;
+  }
+  .your_library_content .library_card a,
+  h3 {
+    display: none;
+  }
+}
+
+/*--------------------------------------------------------your library------------- */
+
+.your_library_content {
+  height: 100%;
+  width: 100%;
+}
+
+.your_library_content .content_heading {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 2%;
+  gap: 40%;
+  padding-bottom: 5%;
+}
+
+.your_library_content .content_heading #library_search {
+  background: transparent;
+  border: none;
+  border-radius: 50%;
+  height: 25px;
+  width: 25px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 200ms ease;
+}
+
+.your_library_content .content_heading #library_search:hover {
+  transform: scale(1.08);
+  filter: brightness(170%);
+}
+
+#library_search img {
+  width: 80%;
+  height: 80%;
+}
+
+.your_library_content .content_heading #Library_recent {
+  width: auto;
+  background-color: rgb(19, 19, 19);
+  border-radius: 15px;
+  color: white;
+  transition: all 200ms linear;
+  height: 25px;
+}
+
+.your_library_content .content_heading #Library_recent:hover {
+  color: whitesmoke;
+  background-color: rgb(44, 44, 44);
+}
+
+/*-------------------------------------------------------your library card-----------------*/
+
+.library_card {
+  background-color: transparent;
+  width: 90%;
+  /* min-height: 80px; */
+  max-height: 85px;
+  border-radius: 11px;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: all 100ms linear;
+  display: flex;
+  align-items: center;
+
+  gap: 5%;
+}
+
+.your_library_content .library_card:hover {
+  background-color: rgb(44, 44, 44);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.071); /* semi-transparent */
+  border-radius: 10px;
+}
+
+.your_library_content .library_card #your_library_card_pic {
+  height: 100%;
+  width: auto;
+  border-radius: 10%;
+}
+.your_library_content .library_card h3 {
+  font-size: 1rem;
+  font-family: monospace;
+}
+
+.your_library_content .library_card a {
+  text-decoration: none;
+  color: white;
+}
+
+/*----------------------------------------------all section content */
+
+.all_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    rgba(0, 112, 182, 0.486) 0%,
+    rgba(0, 112, 182, 0.201) 20%,
+    rgb(19, 19, 19) 40%,
+    rgb(19, 19, 19) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.all_section {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+/*----------------------------------------------all_section_header */
+.all_section_header {
+  flex-shrink: 0;
+  height: 80px;
+  width: 100%;
+  min-height: 0;
+  /* border: 1px solid wheat; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1%;
+  padding-left: 5%;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+#all-btn,
+#music-btn,
+#podcast-btn {
+  height: 40%;
+  background-color: rgb(255, 255, 255);
+  width: auto;
+  padding-left: 13px;
+  padding-right: 13px;
+  border-radius: 15px;
+  border: none;
+  font-size: 0.9rem;
+  transition: all 50ms linear;
+}
+#all-btn:hover {
+  background-color: rgba(255, 255, 255, 0.769);
+}
+
+#music-btn,
+#podcast-btn {
+  color: white;
+  background-color: rgba(255, 255, 255, 0.094);
+}
+#music-btn:hover:hover {
+  background-color: rgba(255, 255, 255, 0.134);
+}
+#podcast-btn:hover {
+  background-color: rgba(255, 255, 255, 0.134);
+}
+
+.all_section_content {
+  flex-grow: 1;
+  width: 100%;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  padding-left: 5%;
+  padding-right: 5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.short_cut {
+  min-height: 100px;
+  height: auto;
+  max-height: 224px;
+  width: 100%;
+  /* border: 1px solid white; */
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  align-items: center;
+  justify-items: center;
+  gap: 8px;
+}
+.short-cut-card {
+  height: 50px;
+  width: 100%;
+  background-color: rgba(240, 248, 255, 0.126);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  font-family: monospace;
+  transition: all 50ms ease-in;
+  position: relative;
+}
+.short-cut-card-img {
+  flex-shrink: 0;
+  height: 100%;
+  width: 46px;
+  background-color: rgba(163, 163, 163, 0.792);
+}
+
+.short-cut-card P {
+  font-size: clamp(12px, 1vw, 1rem);
+}
+
+.short-cut-play-btn {
+  width: 33px;
+  height: 33px;
+  margin-left: auto;
+  background-color: rgb(0, 199, 0);
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 0%;
+  transition: all 50ms linear;
+}
+.short-cut-play-btn img {
+  height: 55%;
+  width: 55%;
+  padding-left: 4%;
+}
+
+.short-cut-card:hover {
+  background-color: rgba(240, 248, 255, 0.187);
+}
+.short-cut-card:hover .short-cut-play-btn {
+  display: flex;
+  box-shadow: 1px 3px 3px 2px rgba(40, 40, 40, 0.747);
+}
+
+.short-cut-play-btn:hover {
+  transform: scale(1.02);
+  background-color: rgb(0, 236, 0);
+}
+
+@media only screen and (max-width: 850px) {
+  .short_cut {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+}
