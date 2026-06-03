@@ -659,6 +659,7 @@ main .your_library,
   align-items: center;
   justify-items: center;
   gap: 8px;
+  padding-bottom: 40px;
 }
 .short-cut-card {
   height: 50px;
@@ -725,4 +726,46 @@ main .your_library,
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
   }
+}
+
+.all_section_content h2 {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  letter-spacing: 1px;
+  padding-bottom: 10px;
+}
+
+.play_cards {
+  display: flex;
+  justify-content: flex-start;
+  overflow-x: scroll;
+}
+
+.play_cards .card {
+  height: auto;
+  width: 175px;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+  row-gap: 5px;
+  transition: all 100ms ease;
+}
+.card #play-cards-img{
+  aspect-ratio: 1 / 1;
+  border-radius: 7px;
+}
+.card #song-name, #artist-name{
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.751);
+}
+.card #song-name{
+  font-size: 1.3rem;
+  color: whitesmoke;
+}
+.card #song-name:hover, .card #artist-name:hover {
+  text-decoration: underline;
+}
+.play_cards .card:hover{
+  background-color: rgba(200, 200, 200, 0.071);
 }
