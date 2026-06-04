@@ -288,7 +288,7 @@ main .your_library,
   }
 }
 
-@media screen and (max-width: 464px) {
+@media screen and (max-width: 700px) {
   .main_container .container {
     grid-template-columns: 70px 1fr;
   }
@@ -445,6 +445,10 @@ main .your_library,
   h3 {
     display: none;
   }
+
+  .short_cut{
+    padding-bottom: 20px !important;
+  }
 }
 
 /*--------------------------------------------------------your library------------- */
@@ -551,7 +555,7 @@ main .your_library,
   color: white;
 }
 
-@media  screen and (max-width:400px){
+@media  screen and (max-width:500px){
   .container{
   grid-template-columns: 1fr !important;
   }
@@ -647,12 +651,11 @@ main .your_library,
 }
 
 .short_cut {
-  min-height: 100px;
   height: auto;
   max-height: 224px;
   width: 100%;
   /* border: 1px solid white; */
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(2, 1fr);
@@ -738,6 +741,10 @@ main .your_library,
   display: flex;
   justify-content: flex-start;
   overflow-x: scroll;
+  overflow-y: hidden;
+  flex-shrink: 0;
+  margin-bottom: 22px;
+  
 }
 
 .play_cards .card {
@@ -767,5 +774,5 @@ main .your_library,
   text-decoration: underline;
 }
 .play_cards .card:hover{
-  background-color: rgba(200, 200, 200, 0.071);
+  background-color: rgba(216, 175, 175, 0.071);
 }
