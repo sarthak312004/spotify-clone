@@ -35,7 +35,7 @@ header {
 }
 
 header .logo_home_search_bar {
-  height: 85px;
+  height: 70px;
   width: 68%;
   display: flex;
   align-items: center;
@@ -103,8 +103,9 @@ header .home_search_bar {
   border-radius: 25px;
   overflow: hidden;
   font-size: 0.9rem;
-  font-weight: bold;
+  font-weight: 600;
   transition: all 100ms linear;
+  font-family: var(--def-heading-font-family);
 }
 .header_options button:first-child,
 button:nth-child(2) {
@@ -271,6 +272,7 @@ main .container {
   padding-left: 0.5%;
   padding-right: 0.5%;
   box-sizing: border-box;
+  font-family: var(--def-heading-font-family);
 }
 
 main .your_library,
@@ -304,6 +306,21 @@ main .your_library,
   color: aliceblue;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* transparent track */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.027); /* semi-transparent */
+  border-radius: 10px;
+}
+
+
 /*------------------------------------------------------------------Your library------------- */
 
 .container .your_library {
@@ -311,6 +328,7 @@ main .your_library,
   flex-direction: column;
   overflow: hidden;
   min-height: 0;
+ 
 }
 .container .your_library .your_library_header {
   flex-shrink: 0;
@@ -402,6 +420,7 @@ main .your_library,
   height: 40%;
   width: 100%;
   gap: 10%;
+  
 }
 
 .your_library_header #library_icon {
@@ -416,6 +435,7 @@ main .your_library,
   background-color: rgb(44, 44, 44);
   font-size: 0.9rem;
   transition: all 200ms linear;
+   font-family: var(--def-heading-font-family);
 }
 .row_two_btns button:hover {
   background-color: rgb(62, 62, 62);
@@ -501,6 +521,7 @@ main .your_library,
   color: white;
   transition: all 200ms linear;
   height: 25px;
+   font-family: var(--def-heading-font-family);
 }
 
 .your_library_content .content_heading #Library_recent:hover {
@@ -521,25 +542,11 @@ main .your_library,
   transition: all 100ms linear;
   display: flex;
   align-items: center;
-
   gap: 5%;
 }
 
 .your_library_content .library_card:hover {
   background-color: rgb(44, 44, 44);
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent; /* transparent track */
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: rgba(255, 255, 255, 0.071); /* semi-transparent */
-  border-radius: 10px;
 }
 
 .your_library_content .library_card #your_library_card_pic {
@@ -548,8 +555,9 @@ main .your_library,
   border-radius: 10%;
 }
 .your_library_content .library_card h3 {
-  font-size: 1rem;
-  font-family: monospace;
+  font-size: 0.9rem;
+   font-family: var(--def-heading-font-family);
+   font-weight: 500;
 }
 
 .your_library_content .library_card a {
@@ -619,6 +627,7 @@ main .your_library,
   border: none;
   font-size: 0.9rem;
   transition: all 50ms linear;
+   font-family: var(--def-heading-font-family);
 }
 #all-btn:hover {
   background-color: rgba(255, 255, 255, 0.769);
@@ -675,9 +684,9 @@ main .your_library,
   align-items: center;
   overflow: hidden;
   gap: 8px;
-  font-size: 0.9rem;
-  font-weight: bold;
-  font-family: monospace;
+  font-size: 1rem;
+  font-weight: 700;
+  font-family: var(--def-heading-font-family);
   transition: all 50ms ease-in;
   position: relative;
 }
@@ -687,9 +696,13 @@ main .your_library,
   width: 46px;
   background-color: rgba(163, 163, 163, 0.792);
 }
-
+.short-cut-card-img img{
+  height: 100%;
+  width: auto;
+  aspect-ratio: 1;
+}
 .short-cut-card P {
-  font-size: clamp(12px, 1vw, 1rem);
+  font-size: clamp(12px, 1vw, 0.8rem);
 }
 
 .short-cut-play-btn {
@@ -734,11 +747,9 @@ main .your_library,
 }
 
 .all_section_content h2 {
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  letter-spacing: 1px;
-  padding-bottom: 10px;
+  font-family: var(--def-heading-font-family);
+  font-size: 1.4rem;
 }
-
 .play_cards {
   display: flex;
   justify-content: flex-start;
@@ -746,7 +757,8 @@ main .your_library,
   overflow-y: hidden;
   flex-shrink: 0;
   margin-bottom: 22px;
-  
+      position: relative;
+    left: -10px;
 }
 
 .play_cards .card {
@@ -757,19 +769,21 @@ main .your_library,
   display: flex;
   flex-direction: column;
   border-radius: 7px;
-  row-gap: 5px;
+  row-gap: 2px;
   transition: all 100ms ease;
+  font-size: 1rem;
 }
+
 .card #play-cards-img{
   aspect-ratio: 1 / 1;
   border-radius: 7px;
 }
 .card #song-name, #artist-name{
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.751);
+  color: rgba(255, 255, 255, 0.674);
 }
 .card #song-name{
-  font-size: 1.3rem;
+  
   color: whitesmoke;
 }
 .card #song-name:hover, .card #artist-name:hover {
@@ -824,7 +838,7 @@ main .your_library,
   
 }
 .song-title-bar > img:first-child{
-  height: 30px;
+  height: 20px;
   width: auto;
   filter: invert(1);
   transition: all 180ms ease-in-out;
@@ -846,6 +860,6 @@ main .your_library,
   transform: translateX(15px);
 }
 .song_info:hover #song-title-name{
-  transform: translateX(40px);
+  transform: translateX(35px);
 }
  
