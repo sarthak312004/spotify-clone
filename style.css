@@ -471,8 +471,7 @@ main .your_library,
   .your_library_content .library_card {
     justify-content: center;
   }
-  .your_library_content .library_card a,
-  h3 {
+  .your_library_content .library_card .library-playlist {
     display: none;
   }
 
@@ -560,7 +559,7 @@ main .your_library,
 .your_library_content .library_card #your_library_card_pic {
   height: 100%;
   width: auto;
-  border-radius: 10%;
+  border-radius: 5px;
 }
 .your_library_content .library_card h3 {
   font-size: 0.9rem;
